@@ -1,1 +1,2 @@
+#
 define nagios::object::servicegroup(){}
