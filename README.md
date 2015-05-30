@@ -2,4 +2,4 @@
 
 Work in Progress...
 
-Install Nagios and related components.
+Install/configure Nagios
