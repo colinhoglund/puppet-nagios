@@ -37,5 +37,12 @@
 #
 class nagios {
 
+  contain nagios::install
+  contain nagios::config
+  contain nagios::service
+
+  Class['nagios::install'] ->
+  Class['nagios::config'] ->
+  Class['nagios::service']
 
 }

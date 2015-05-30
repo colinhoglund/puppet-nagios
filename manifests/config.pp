@@ -1,0 +1,4 @@
+#
+class nagios::config () {
+
+}

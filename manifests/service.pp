@@ -1,1 +1,3 @@
-define nagios::service(){}
+class nagios::service () {
+
+}
