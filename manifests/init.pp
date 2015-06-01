@@ -39,7 +39,7 @@ class nagios (
   $package_manage = $nagios::params::package_manage,
   $package_ensure = $nagios::params::package_ensure,
   $package_name   = $nagios::params::package_name,
-){
+) inherits nagios::params {
   contain nagios::install
   contain nagios::config
   contain nagios::service
