@@ -35,7 +35,11 @@
 #
 # Copyright 2015 Your name here, unless otherwise noted.
 #
-class nagios {
+class nagios (
+  $package_manage = $nagios::params::package_manage,
+  $package_ensure = $nagios::params::package_ensure,
+  $package_name   = $nagios::params::package_name,
+){
   contain nagios::install
   contain nagios::config
   contain nagios::service

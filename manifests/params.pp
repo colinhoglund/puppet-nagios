@@ -1,14 +1,18 @@
 #
 class nagios::params {
+
+  $package_manage = true
+  $package_ensure = 'present'
+
   case $operatingsystem {
     'Debian': {
-      $prereq = []
-      $package = 'nagios3'
+      $package_prereq = []
+      $package_name = 'nagios3'
     }
 
     'CentOS': {
-      $prereq  = ['epel-release']
-      $package = 'nagios'
+      $package_prereq  = ['epel-release']
+      $package_name = 'nagios'
     }
 
     default: {

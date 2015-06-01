@@ -1,12 +1,10 @@
 #
-class nagios::install (
-  $ensure  = present,
-  $prereq  = nagios::params::prereq,
-  $package = nagios::params::package,
-){
-  package {[
-    $prereq,
-    $package]:
-      ensure => $ensure;
+class nagios::install {
+  if $nagios::package_manage {
+    package {[
+      $nagios::params::package_prereq,
+      $nagios::package_name]:
+        ensure => present;
+    }
   }
 }
