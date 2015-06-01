@@ -1,10 +1,8 @@
 #
 class nagios::params {
-
-  $prereq = []
-
   case $operatingsystem {
     'Debian': {
+      $prereq = []
       $package = 'nagios3'
     }
 

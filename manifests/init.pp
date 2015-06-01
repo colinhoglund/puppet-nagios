@@ -36,7 +36,6 @@
 # Copyright 2015 Your name here, unless otherwise noted.
 #
 class nagios {
-
   contain nagios::install
   contain nagios::config
   contain nagios::service
@@ -44,5 +43,4 @@ class nagios {
   Class['nagios::install'] ->
   Class['nagios::config'] ->
   Class['nagios::service']
-
 }
