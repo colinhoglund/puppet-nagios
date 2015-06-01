@@ -4,7 +4,7 @@ class nagios::install {
     package {[
       $nagios::params::package_prereq,
       $nagios::package_name]:
-        ensure => present;
+        ensure => $nagios::package_ensure;
     }
   }
 }
