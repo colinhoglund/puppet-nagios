@@ -1,0 +1,399 @@
+<% if @log_file -%>
+log_file=<%= @log_file %>
+<% end -%>
+<% if @cfg_dir -%>
+cfg_dir=<%= @cfg_dir %>
+<% end -%>
+<% if @object_cache_file -%>
+object_cache_file=<%= @object_cache_file %>
+<% end -%>
+<% if @precached_object_file -%>
+precached_object_file=<%= @precached_object_file %>
+<% end -%>
+<% if @resource_file -%>
+resource_file=<%= @resource_file %>
+<% end -%>
+<% if @status_file -%>
+status_file=<%= @status_file %>
+<% end -%>
+<% if @status_update_interval -%>
+status_update_interval=<%= @status_update_interval %>
+<% end -%>
+<% if @nagios_user -%>
+nagios_user=<%= @nagios_user %>
+<% end -%>
+<% if @nagios_group -%>
+nagios_group=<%= @nagios_group %>
+<% end -%>
+<% if @check_external_commands -%>
+check_external_commands=<%= @check_external_commands %>
+<% end -%>
+<% if @command_check_interval -%>
+command_check_interval=<%= @command_check_interval %>
+<% end -%>
+<% if @command_file -%>
+command_file=<%= @command_file %>
+<% end -%>
+<% if @external_command_buffer_slots -%>
+external_command_buffer_slots=<%= @external_command_buffer_slots %>
+<% end -%>
+<% if @lock_file -%>
+lock_file=<%= @lock_file %>
+<% end -%>
+<% if @temp_file -%>
+temp_file=<%= @temp_file %>
+<% end -%>
+<% if @temp_path -%>
+temp_path=<%= @temp_path %>
+<% end -%>
+<% if @event_broker_options -%>
+event_broker_options=<%= @event_broker_options %>
+<% end -%>
+<% if @broker_module -%>
+broker_module=<%= @broker_module %>
+<% end -%>
+<% if @log_rotation_method -%>
+log_rotation_method=<%= @log_rotation_method %>
+<% end -%>
+<% if @log_archive_path -%>
+log_archive_path=<%= @log_archive_path %>
+<% end -%>
+<% if @use_syslog -%>
+use_syslog=<%= @use_syslog %>
+<% end -%>
+<% if @log_notifications -%>
+log_notifications=<%= @log_notifications %>
+<% end -%>
+<% if @log_service_retries -%>
+log_service_retries=<%= @log_service_retries %>
+<% end -%>
+<% if @log_host_retries -%>
+log_host_retries=<%= @log_host_retries %>
+<% end -%>
+<% if @log_event_handlers -%>
+log_event_handlers=<%= @log_event_handlers %>
+<% end -%>
+<% if @log_initial_states -%>
+log_initial_states=<%= @log_initial_states %>
+<% end -%>
+<% if @log_external_commands -%>
+log_external_commands=<%= @log_external_commands %>
+<% end -%>
+<% if @log_passive_checks -%>
+log_passive_checks=<%= @log_passive_checks %>
+<% end -%>
+<% if @global_host_event_handler -%>
+global_host_event_handler=<%= @global_host_event_handler %>
+<% end -%>
+<% if @global_service_event_handler -%>
+global_service_event_handler=<%= @global_service_event_handler %>
+<% end -%>
+<% if @service_inter_check_delay_method -%>
+service_inter_check_delay_method=<%= @service_inter_check_delay_method %>
+<% end -%>
+<% if @max_service_check_spread -%>
+max_service_check_spread=<%= @max_service_check_spread %>
+<% end -%>
+<% if @service_interleave_factor -%>
+service_interleave_factor=<%= @service_interleave_factor %>
+<% end -%>
+<% if @host_inter_check_delay_method -%>
+host_inter_check_delay_method=<%= @host_inter_check_delay_method %>
+<% end -%>
+<% if @max_host_check_spread -%>
+max_host_check_spread=<%= @max_host_check_spread %>
+<% end -%>
+<% if @max_concurrent_checks -%>
+max_concurrent_checks=<%= @max_concurrent_checks %>
+<% end -%>
+<% if @check_result_reaper_frequency -%>
+check_result_reaper_frequency=<%= @check_result_reaper_frequency %>
+<% end -%>
+<% if @max_check_result_reaper_time -%>
+max_check_result_reaper_time=<%= @max_check_result_reaper_time %>
+<% end -%>
+<% if @check_result_path -%>
+check_result_path=<%= @check_result_path %>
+<% end -%>
+<% if @max_check_result_file_age -%>
+max_check_result_file_age=<%= @max_check_result_file_age %>
+<% end -%>
+<% if @cached_host_check_horizon -%>
+cached_host_check_horizon=<%= @cached_host_check_horizon %>
+<% end -%>
+<% if @cached_service_check_horizon -%>
+cached_service_check_horizon=<%= @cached_service_check_horizon %>
+<% end -%>
+<% if @enable_predictive_host_dependency_checks -%>
+enable_predictive_host_dependency_checks=<%= @enable_predictive_host_dependency_checks %>
+<% end -%>
+<% if @enable_predictive_service_dependency_checks -%>
+enable_predictive_service_dependency_checks=<%= @enable_predictive_service_dependency_checks %>
+<% end -%>
+<% if @soft_state_dependencies -%>
+soft_state_dependencies=<%= @soft_state_dependencies %>
+<% end -%>
+<% if @time_change_threshold -%>
+time_change_threshold=<%= @time_change_threshold %>
+<% end -%>
+<% if @auto_reschedule_checks -%>
+auto_reschedule_checks=<%= @auto_reschedule_checks %>
+<% end -%>
+<% if @auto_rescheduling_interval -%>
+auto_rescheduling_interval=<%= @auto_rescheduling_interval %>
+<% end -%>
+<% if @auto_rescheduling_window -%>
+auto_rescheduling_window=<%= @auto_rescheduling_window %>
+<% end -%>
+<% if @sleep_time -%>
+sleep_time=<%= @sleep_time %>
+<% end -%>
+<% if @service_check_timeout -%>
+service_check_timeout=<%= @service_check_timeout %>
+<% end -%>
+<% if @host_check_timeout -%>
+host_check_timeout=<%= @host_check_timeout %>
+<% end -%>
+<% if @event_handler_timeout -%>
+event_handler_timeout=<%= @event_handler_timeout %>
+<% end -%>
+<% if @notification_timeout -%>
+notification_timeout=<%= @notification_timeout %>
+<% end -%>
+<% if @ocsp_timeout -%>
+ocsp_timeout=<%= @ocsp_timeout %>
+<% end -%>
+<% if @perfdata_timeout -%>
+perfdata_timeout=<%= @perfdata_timeout %>
+<% end -%>
+<% if @retain_state_information -%>
+retain_state_information=<%= @retain_state_information %>
+<% end -%>
+<% if @state_retention_file -%>
+state_retention_file=<%= @state_retention_file %>
+<% end -%>
+<% if @retention_update_interval -%>
+retention_update_interval=<%= @retention_update_interval %>
+<% end -%>
+<% if @use_retained_program_state -%>
+use_retained_program_state=<%= @use_retained_program_state %>
+<% end -%>
+<% if @use_retained_scheduling_info -%>
+use_retained_scheduling_info=<%= @use_retained_scheduling_info %>
+<% end -%>
+<% if @retained_host_attribute_mask -%>
+retained_host_attribute_mask=<%= @retained_host_attribute_mask %>
+<% end -%>
+<% if @retained_service_attribute_mask -%>
+retained_service_attribute_mask=<%= @retained_service_attribute_mask %>
+<% end -%>
+<% if @retained_process_host_attribute_mask -%>
+retained_process_host_attribute_mask=<%= @retained_process_host_attribute_mask %>
+<% end -%>
+<% if @retained_process_service_attribute_mask -%>
+retained_process_service_attribute_mask=<%= @retained_process_service_attribute_mask %>
+<% end -%>
+<% if @retained_contact_host_attribute_mask -%>
+retained_contact_host_attribute_mask=<%= @retained_contact_host_attribute_mask %>
+<% end -%>
+<% if @retained_contact_service_attribute_mask -%>
+retained_contact_service_attribute_mask=<%= @retained_contact_service_attribute_mask %>
+<% end -%>
+<% if @interval_length -%>
+interval_length=<%= @interval_length %>
+<% end -%>
+<% if @check_for_updates -%>
+check_for_updates=<%= @check_for_updates %>
+<% end -%>
+<% if @bare_update_check -%>
+bare_update_check=<%= @bare_update_check %>
+<% end -%>
+<% if @use_aggressive_host_checking -%>
+use_aggressive_host_checking=<%= @use_aggressive_host_checking %>
+<% end -%>
+<% if @execute_service_checks -%>
+execute_service_checks=<%= @execute_service_checks %>
+<% end -%>
+<% if @accept_passive_service_checks -%>
+accept_passive_service_checks=<%= @accept_passive_service_checks %>
+<% end -%>
+<% if @execute_host_checks -%>
+execute_host_checks=<%= @execute_host_checks %>
+<% end -%>
+<% if @accept_passive_host_checks -%>
+accept_passive_host_checks=<%= @accept_passive_host_checks %>
+<% end -%>
+<% if @enable_notifications -%>
+enable_notifications=<%= @enable_notifications %>
+<% end -%>
+<% if @enable_event_handlers -%>
+enable_event_handlers=<%= @enable_event_handlers %>
+<% end -%>
+<% if @process_performance_data -%>
+process_performance_data=<%= @process_performance_data %>
+<% end -%>
+<% if @host_perfdata_command -%>
+host_perfdata_command=<%= @host_perfdata_command %>
+<% end -%>
+<% if @service_perfdata_command -%>
+service_perfdata_command=<%= @service_perfdata_command %>
+<% end -%>
+<% if @host_perfdata_file -%>
+host_perfdata_file=<%= @host_perfdata_file %>
+<% end -%>
+<% if @service_perfdata_file -%>
+service_perfdata_file=<%= @service_perfdata_file %>
+<% end -%>
+<% if @host_perfdata_file_template -%>
+host_perfdata_file_template=<%= @host_perfdata_file_template %>
+<% end -%>
+<% if @service_perfdata_file_template -%>
+service_perfdata_file_template=<%= @service_perfdata_file_template %>
+<% end -%>
+<% if @host_perfdata_file_mode -%>
+host_perfdata_file_mode=<%= @host_perfdata_file_mode %>
+<% end -%>
+<% if @service_perfdata_file_mode -%>
+service_perfdata_file_mode=<%= @service_perfdata_file_mode %>
+<% end -%>
+<% if @host_perfdata_file_processing_interval -%>
+host_perfdata_file_processing_interval=<%= @host_perfdata_file_processing_interval %>
+<% end -%>
+<% if @service_perfdata_file_processing_interval -%>
+service_perfdata_file_processing_interval=<%= @service_perfdata_file_processing_interval %>
+<% end -%>
+<% if @host_perfdata_file_processing_command -%>
+host_perfdata_file_processing_command=<%= @host_perfdata_file_processing_command %>
+<% end -%>
+<% if @service_perfdata_file_processing_command -%>
+service_perfdata_file_processing_command=<%= @service_perfdata_file_processing_command %>
+<% end -%>
+<% if @host_perfdata_process_empty_results -%>
+host_perfdata_process_empty_results=<%= @host_perfdata_process_empty_results %>
+<% end -%>
+<% if @service_perfdata_process_empty_results -%>
+service_perfdata_process_empty_results=<%= @service_perfdata_process_empty_results %>
+<% end -%>
+<% if @obsess_over_services -%>
+obsess_over_services=<%= @obsess_over_services %>
+<% end -%>
+<% if @ocsp_command -%>
+ocsp_command=<%= @ocsp_command %>
+<% end -%>
+<% if @obsess_over_hosts -%>
+obsess_over_hosts=<%= @obsess_over_hosts %>
+<% end -%>
+<% if @ochp_command -%>
+ochp_command=<%= @ochp_command %>
+<% end -%>
+<% if @ochp_timeout -%>
+ochp_timeout=<%= @ochp_timeout %>
+<% end -%>
+<% if @translate_passive_host_checks -%>
+translate_passive_host_checks=<%= @translate_passive_host_checks %>
+<% end -%>
+<% if @passive_host_checks_are_soft -%>
+passive_host_checks_are_soft=<%= @passive_host_checks_are_soft %>
+<% end -%>
+<% if @check_for_orphaned_services -%>
+check_for_orphaned_services=<%= @check_for_orphaned_services %>
+<% end -%>
+<% if @check_for_orphaned_hosts -%>
+check_for_orphaned_hosts=<%= @check_for_orphaned_hosts %>
+<% end -%>
+<% if @check_service_freshness -%>
+check_service_freshness=<%= @check_service_freshness %>
+<% end -%>
+<% if @service_freshness_check_interval -%>
+service_freshness_check_interval=<%= @service_freshness_check_interval %>
+<% end -%>
+<% if @service_check_timeout_state -%>
+service_check_timeout_state=<%= @service_check_timeout_state %>
+<% end -%>
+<% if @check_host_freshness -%>
+check_host_freshness=<%= @check_host_freshness %>
+<% end -%>
+<% if @host_freshness_check_interval -%>
+host_freshness_check_interval=<%= @host_freshness_check_interval %>
+<% end -%>
+<% if @additional_freshness_latency -%>
+additional_freshness_latency=<%= @additional_freshness_latency %>
+<% end -%>
+<% if @enable_flap_detection -%>
+enable_flap_detection=<%= @enable_flap_detection %>
+<% end -%>
+<% if @low_service_flap_threshold -%>
+low_service_flap_threshold=<%= @low_service_flap_threshold %>
+<% end -%>
+<% if @high_service_flap_threshold -%>
+high_service_flap_threshold=<%= @high_service_flap_threshold %>
+<% end -%>
+<% if @low_host_flap_threshold -%>
+low_host_flap_threshold=<%= @low_host_flap_threshold %>
+<% end -%>
+<% if @high_host_flap_threshold -%>
+high_host_flap_threshold=<%= @high_host_flap_threshold %>
+<% end -%>
+<% if @date_format -%>
+date_format=<%= @date_format %>
+<% end -%>
+<% if @use_timezone -%>
+use_timezone=<%= @use_timezone %>
+<% end -%>
+<% if @p1_file -%>
+p1_file=<%= @p1_file %>
+<% end -%>
+<% if @enable_embedded_perl -%>
+enable_embedded_perl=<%= @enable_embedded_perl %>
+<% end -%>
+<% if @use_embedded_perl_implicitly -%>
+use_embedded_perl_implicitly=<%= @use_embedded_perl_implicitly %>
+<% end -%>
+<% if @illegal_object_name_chars -%>
+illegal_object_name_chars=<%= @illegal_object_name_chars %>
+<% end -%>
+<% if @illegal_macro_output_chars -%>
+illegal_macro_output_chars=<%= @illegal_macro_output_chars %>
+<% end -%>
+<% if @use_regexp_matching -%>
+use_regexp_matching=<%= @use_regexp_matching %>
+<% end -%>
+<% if @use_true_regexp_matching -%>
+use_true_regexp_matching=<%= @use_true_regexp_matching %>
+<% end -%>
+<% if @admin_email -%>
+admin_email=<%= @admin_email %>
+<% end -%>
+<% if @admin_pager -%>
+admin_pager=<%= @admin_pager %>
+<% end -%>
+<% if @daemon_dumps_core -%>
+daemon_dumps_core=<%= @daemon_dumps_core %>
+<% end -%>
+<% if @use_large_installation_tweaks -%>
+use_large_installation_tweaks=<%= @use_large_installation_tweaks %>
+<% end -%>
+<% if @enable_environment_macros -%>
+enable_environment_macros=<%= @enable_environment_macros %>
+<% end -%>
+<% if @free_child_process_memory -%>
+free_child_process_memory=<%= @free_child_process_memory %>
+<% end -%>
+<% if @child_processes_fork_twice -%>
+child_processes_fork_twice=<%= @child_processes_fork_twice %>
+<% end -%>
+<% if @debug_level -%>
+debug_level=<%= @debug_level %>
+<% end -%>
+<% if @debug_verbosity -%>
+debug_verbosity=<%= @debug_verbosity %>
+<% end -%>
+<% if @debug_file -%>
+debug_file=<%= @debug_file %>
+<% end -%>
+<% if @max_debug_file_size -%>
+max_debug_file_size=<%= @max_debug_file_size %>
+<% end -%>
+<% if @allow_empty_hostgroup_assignment -%>
+allow_empty_hostgroup_assignment=<%= @allow_empty_hostgroup_assignment %>
+<% end -%>
