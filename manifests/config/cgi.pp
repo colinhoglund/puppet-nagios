@@ -47,5 +47,6 @@ class nagios::config::cgi (
     group   => 'root',
     mode    => '0644',
     content => template("${module_name}/cgi.erb"),
+    notify  => Service[$nagios::service_name],
   }
 }

@@ -2,6 +2,9 @@
 class nagios::params {
   $package_manage = true
   $package_ensure = 'present'
+  $service_manage = true
+  $service_enable = true
+  $service_ensure = 'running'
 
   $use_pending_states = '1'
   $use_authentication = '1'
@@ -42,6 +45,7 @@ class nagios::params {
     'Debian': {
       $package_prereq = []
       $package_name = 'nagios3'
+      $service_name = 'nagios3'
       $cgi_config_file = '/etc/nagios3/cgi.cfg'
       $main_config_file = '/etc/nagios3/nagios.cfg'
       $physical_html_path = '/usr/share/nagios3/htdocs'
@@ -53,6 +57,7 @@ class nagios::params {
     'CentOS': {
       $package_prereq  = ['epel-release']
       $package_name = 'nagios'
+      $service_name = 'nagios'
       $cgi_config_file = '/etc/nagios/cgi.cfg'
       $main_config_file = '/etc/nagios/nagios.cfg'
       $physical_html_path = '/usr/share/nagios/html'
