@@ -36,15 +36,16 @@
 # Copyright 2015 Your name here, unless otherwise noted.
 #
 class nagios (
-  $package_manage = $nagios::params::package_manage,
-  $package_ensure = $nagios::params::package_ensure,
-  $package_name   = $nagios::params::package_name,
+  $package_manage  = $nagios::params::package_manage,
+  $package_ensure  = $nagios::params::package_ensure,
+  $package_name    = $nagios::params::package_name,
+  $cgi_config_file = $nagios::params::cgi_config_file,
 ) inherits nagios::params {
   contain nagios::install
   contain nagios::config
   contain nagios::service
 
   Class['nagios::install'] ->
-  Class['nagios::config'] ->
+  Class['nagios::config'] ~>
   Class['nagios::service']
 }

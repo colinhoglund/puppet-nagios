@@ -43,6 +43,7 @@ class nagios::params {
     'Debian': {
       $package_prereq = []
       $package_name = 'nagios3'
+      $cgi_config_file = '/etc/nagios3/cgi.cfg'
       $main_config_file = '/etc/nagios3/nagios.cfg'
       $physical_html_path = '/usr/share/nagios3/htdocs'
       $url_html_path = '/nagios3'
@@ -53,6 +54,7 @@ class nagios::params {
     'CentOS': {
       $package_prereq  = ['epel-release']
       $package_name = 'nagios'
+      $cgi_config_file = '/etc/nagios/cgi.cfg'
       $main_config_file = '/etc/nagios/nagios.cfg'
       $physical_html_path = '/usr/share/nagios/html'
       $url_html_path = '/nagios'

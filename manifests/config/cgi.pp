@@ -40,5 +40,11 @@ class nagios::config::cgi (
   $enable_splunk_integration                =  $nagios::params::enable_splunk_integration,
   $splunk_url                               =  $nagios::params::splunk_url,
 ){
-
+  file { $nagios::cgi_config_file:
+    ensure  => file,
+    owner   => 'root',
+    group   => 'root',
+    mode    => '0644',
+    content => template("${module_name}/cgi.erb"),
+  }
 }
