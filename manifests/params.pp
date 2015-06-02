@@ -16,7 +16,7 @@ class nagios::params {
     }
 
     default: {
-      fail("Unsupported platform: colinhoglund-${module_name} currently doesn't support ${::osfamily} or ${::operatingsystem}")
+      fail("Unsupported platform: colinhoglund-${module_name} currently doesn't support ${::osfamily} or ${::operatingsystem} or ${::operatingsystem} ${::operatingsystemmajrelease}")
     }
   }
 }
