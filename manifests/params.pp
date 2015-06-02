@@ -1,6 +1,5 @@
 #
 class nagios::params {
-
   $package_manage = true
   $package_ensure = 'present'
 
