@@ -1,17 +1,17 @@
 #
 class nagios::config (
-  $command_config_file           = $nagios::params::command_config_file,
-  $contact_config_file           = $nagios::params::contact_config_file,
-  $contactgroup_config_file      = $nagios::params::contactgroup_config_file,
-  $host_config_file              = $nagios::params::host_config_file,
-  $hostdependency_config_file    = $nagios::params::hostdependency_config_file,
-  $hostescalation_config_file    = $nagios::params::hostescalation_config_file,
-  $hostgroup_config_file         = $nagios::params::hostgroup_config_file,
-  $service_config_file           = $nagios::params::service_config_file,
-  $servicedependency_config_file = $nagios::params::servicedependency_config_file,
-  $serviceescalation_config_file = $nagios::params::serviceescalation_config_file,
-  $servicegroup_config_file      = $nagios::params::servicegroup_config_file,
-  $timeperiod_config_file        = $nagios::params::timeperiod_config_file,
+  $command_config_file           = "${nagios::cfg_dir}/commands.cfg",
+  $contact_config_file           = "${nagios::cfg_dir}/contacts.cfg",
+  $contactgroup_config_file      = "${nagios::cfg_dir}/contactgroups.cfg",
+  $host_config_file              = "${nagios::cfg_dir}/hosts.cfg",
+  $hostdependency_config_file    = "${nagios::cfg_dir}/hostdependencys.cfg",
+  $hostescalation_config_file    = "${nagios::cfg_dir}/hostescalations.cfg",
+  $hostgroup_config_file         = "${nagios::cfg_dir}/hostgroups.cfg",
+  $service_config_file           = "${nagios::cfg_dir}/services.cfg",
+  $servicedependency_config_file = "${nagios::cfg_dir}/servicedependencys.cfg",
+  $serviceescalation_config_file = "${nagios::cfg_dir}/serviceescalations.cfg",
+  $servicegroup_config_file      = "${nagios::cfg_dir}/servicegroups.cfg",
+  $timeperiod_config_file        = "${nagios::cfg_dir}/timeperiods.cfg",
 ){
   contain nagios::config::main
   contain nagios::config::cgi

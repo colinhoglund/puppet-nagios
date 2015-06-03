@@ -229,18 +229,4 @@ class nagios::params {
       fail("Unsupported platform: colinhoglund-${module_name} currently doesn't support ${::osfamily} or ${::operatingsystem} or ${::operatingsystem} ${::operatingsystemmajrelease}")
     }
   }
-
-  # config files
-  $command_config_file = "${cfg_dir}/commands.cfg"
-  $contact_config_file = "${cfg_dir}/contacts.cfg"
-  $contactgroup_config_file = "${cfg_dir}/contactgroups.cfg"
-  $host_config_file = "${cfg_dir}/hosts.cfg"
-  $hostdependency_config_file = "${cfg_dir}/hostdependencys.cfg"
-  $hostescalation_config_file = "${cfg_dir}/hostescalations.cfg"
-  $hostgroup_config_file = "${cfg_dir}/hostgroups.cfg"
-  $service_config_file = "${cfg_dir}/services.cfg"
-  $servicedependency_config_file = "${cfg_dir}/servicedependencys.cfg"
-  $serviceescalation_config_file = "${cfg_dir}/serviceescalations.cfg"
-  $servicegroup_config_file = "${cfg_dir}/servicegroups.cfg"
-  $timeperiod_config_file = "${cfg_dir}/timeperiods.cfg"
 }
