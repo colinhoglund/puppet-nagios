@@ -133,7 +133,7 @@ class nagios::config::main (
   $max_debug_file_size                         = $nagios::params::max_debug_file_size,
   $allow_empty_hostgroup_assignment            = $nagios::params::allow_empty_hostgroup_assignment,
 ){
-  $cfg_dir = $nagios::cfg_dir,
+  $cfg_dir = $nagios::cfg_dir
 
   file { $nagios::main_config_file:
     ensure  => file,

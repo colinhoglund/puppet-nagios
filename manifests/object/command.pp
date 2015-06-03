@@ -1,2 +1,5 @@
 #
-define nagios::object::command(){}
+define nagios::object::command(
+){
+
+}
