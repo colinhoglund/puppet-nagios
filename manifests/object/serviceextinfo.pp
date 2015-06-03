@@ -1,2 +1,0 @@
-#
-define nagios::object::serviceextinfo(){}
