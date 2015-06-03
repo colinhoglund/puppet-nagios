@@ -16,8 +16,15 @@ class nagios::config (
   contain nagios::config::main
   contain nagios::config::cgi
 
-  file {[
-    $command_config_file,
+  file {
+    $nagios::cfg_dir:
+      ensure  => directory,
+      owner   => 'root',
+      group   => 'root',
+      mode    => '0755',
+      recurse => true,
+      purge   => true;
+    [$command_config_file,
     $contact_config_file,
     $contactgroup_config_file,
     $host_config_file,
