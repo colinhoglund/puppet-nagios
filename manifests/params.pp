@@ -196,6 +196,9 @@ class nagios::params {
 
     'CentOS': {
       $package_prereq  = ['epel-release']
+      if ! defined(Package[$package_prereq]) {
+        package { $package_prereq: ensure => present }
+      }
       $package_name = 'nagios'
       $service_name = 'nagios'
       $cgi_config_file = '/etc/nagios/cgi.cfg'
