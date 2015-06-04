@@ -1,8 +1,8 @@
 {
   "name": "colinhoglund-nagios",
   "version": "0.1.0",
-  "author": "colinhoglund",
-  "summary": "Install Nagios and related components",
+  "author": "Colin Hoglund",
+  "summary": "Install Nagios",
   "license": "Apache 2.0",
   "source": "https://github.com/colinhoglund/puppet-nagios",
   "project_page": "https://github.com/colinhoglund/puppet-nagios",
