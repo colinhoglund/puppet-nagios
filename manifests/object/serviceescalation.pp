@@ -18,10 +18,16 @@ define nagios::object::serviceescalation(
   $register              = undef,
   $service_description   = undef,
   $servicegroup_name     = undef,
-  $target                = $nagios::config::serviceescalation_config_file,
+  $target                = undef,
   $use                   = undef,
 ){
   include nagios
+
+  unless $target {
+    $_target = $nagios::config::serviceescalation_config_file
+  } else {
+    $_target = $target
+  }
 
   nagios_serviceescalation { $_naginator_name:
     ensure                => $ensure,
@@ -41,7 +47,7 @@ define nagios::object::serviceescalation(
     register              => $register,
     service_description   => $service_description,
     servicegroup_name     => $servicegroup_name,
-    target                => $target,
+    target                => $_target,
     use                   => $use,
   }
 }

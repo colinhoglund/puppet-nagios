@@ -14,10 +14,16 @@ define nagios::object::hostgroup(
   $provider          = undef,
   $realm             = undef,
   $register          = undef,
-  $target            = $nagios::config::hostgroup_config_file,
+  $target            = undef,
   $use               = undef,
 ){
   include nagios
+
+  unless $target {
+    $_target = $nagios::config::hostgroup_config_file
+  } else {
+    $_target = $target
+  }
 
   nagios_hostgroup { $hostgroup_name:
     ensure            => $ensure,
@@ -33,7 +39,7 @@ define nagios::object::hostgroup(
     provider          => $provider,
     realm             => $realm,
     register          => $register,
-    target            => $target,
+    target            => $_target,
     use               => $use,
   }
 }

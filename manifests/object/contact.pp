@@ -28,10 +28,16 @@ define nagios::object::contact (
   $service_notification_options  = undef,
   $service_notification_period   = undef,
   $service_notifications_enabled = undef,
-  $target                        = $nagios::config::contact_config_file,
+  $target                        = undef,
   $use                           = undef,
 ){
   include nagios
+
+  unless $target {
+    $_target = $nagios::config::contact_config_file
+  } else {
+    $_target = $target
+  }
 
   nagios_contact { $contact_name:
     ensure                        => $ensure,
@@ -61,7 +67,7 @@ define nagios::object::contact (
     service_notification_options  => $service_notification_options,
     service_notification_period   => $service_notification_period,
     service_notifications_enabled => $service_notifications_enabled,
-    target                        => $target,
+    target                        => $_target,
     use                           => $use,
   }
 }

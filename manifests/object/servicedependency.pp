@@ -17,10 +17,16 @@ define nagios::object::servicedependency(
   $provider                      = undef,
   $register                      = undef,
   $service_description           = undef,
-  $target                        = $nagios::config::servicedependency_config_file,
+  $target                        = undef,
   $use                           = undef,
 ){
   include nagios
+
+  unless $target {
+    $_target = $nagios::config::servicedependency_config_file
+  } else {
+    $_target = $target
+  }
 
   nagios_servicedependency { $_naginator_name:
     ensure                        => $ensure,
@@ -39,7 +45,7 @@ define nagios::object::servicedependency(
     provider                      => $provider,
     register                      => $register,
     service_description           => $service_description,
-    target                        => $target,
+    target                        => $_target,
     use                           => $use,
   }
 }

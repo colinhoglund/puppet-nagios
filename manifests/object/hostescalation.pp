@@ -16,10 +16,16 @@ define nagios::object::hostescalation(
   $owner                 = undef,
   $provider              = undef,
   $register              = undef,
-  $target                = $nagios::config::hostescalation_config_file,
+  $target                = undef,
   $use                   = undef,
 ){
   include nagios
+
+  unless $target {
+    $_target = $nagios::config::hostescalation_config_file
+  } else {
+    $_target = $target
+  }
 
   nagios_hostescalation { $_naginator_name:
     ensure                => $ensure,
@@ -37,7 +43,7 @@ define nagios::object::hostescalation(
     owner                 => $owner,
     provider              => $provider,
     register              => $register,
-    target                => $target,
+    target                => $_target,
     use                   => $use,
   }
 }

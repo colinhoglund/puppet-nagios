@@ -8,10 +8,16 @@ define nagios::object::command(
   $owner        = undef,
   $poller_tag   = undef,
   $provider     = undef,
-  $target       = $nagios::config::command_config_file,
+  $target       = undef,
   $use          = undef,
 ){
   include nagios
+
+  unless $target {
+    $_target = $nagios::config::command_config_file
+  } else {
+    $_target = $target
+  }
 
   nagios_command { $command_name:
     ensure       => $ensure,
@@ -21,7 +27,7 @@ define nagios::object::command(
     owner        => $owner,
     poller_tag   => $poller_tag,
     provider     => $provider,
-    target       => $target,
+    target       => $_target,
     use          => $use,
   }
 }

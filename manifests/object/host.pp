@@ -50,11 +50,17 @@ define nagios::object::host(
   $retry_interval               = undef,
   $stalking_options             = undef,
   $statusmap_image              = undef,
-  $target                       = $nagios::config::host_config_file,
+  $target                       = undef,
   $use                          = undef,
   $vrml_image                   = undef,
 ){
   include nagios
+
+  unless $target {
+    $_target = $nagios::config::host_config_file
+  } else {
+    $_target = $target
+  }
 
   nagios_host { $host_name:
     ensure                       => $ensure,
@@ -106,7 +112,7 @@ define nagios::object::host(
     retry_interval               => $retry_interval,
     stalking_options             => $stalking_options,
     statusmap_image              => $statusmap_image,
-    target                       => $target,
+    target                       => $_target,
     use                          => $use,
     vrml_image                   => $vrml_image,
   }

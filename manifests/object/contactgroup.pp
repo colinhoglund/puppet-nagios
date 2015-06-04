@@ -10,10 +10,16 @@ define nagios::object::contactgroup(
   $owner                = undef,
   $provider             = undef,
   $register             = undef,
-  $target               = $nagios::config::contactgroup_config_file,
+  $target               = undef,
   $use                  = undef,
 ){
   include nagios
+
+  unless $target {
+    $_target = $nagios::config::contactgroup_config_file
+  } else {
+    $_target = $target
+  }
 
   nagios_contactgroup { $contactgroup_name:
     ensure               => $ensure,
@@ -25,7 +31,7 @@ define nagios::object::contactgroup(
     owner                => $owner,
     provider             => $provider,
     register             => $register,
-    target               => $target,
+    target               => $_target,
     use                  => $use,
   }
 }

@@ -19,8 +19,10 @@ define nagios::object::hostdependency(
 ){
   include nagios
 
-  if $target == undef {
+  unless $target {
     $_target = $nagios::config::hostdependency_config_file
+  } else {
+    $_target = $target
   }
 
   nagios_hostdependency { $host_name:

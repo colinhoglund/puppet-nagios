@@ -13,10 +13,16 @@ define nagios::object::servicegroup(
   $provider             = undef,
   $register             = undef,
   $servicegroup_members = undef,
-  $target               = $nagios::config::servicegroup_config_file,
+  $target               = undef,
   $use                  = undef,
 ){
   include nagios
+
+  unless $target {
+    $_target = $nagios::config::servicegroup_config_file
+  } else {
+    $_target = $target
+  }
 
   nagios_servicegroup { $servicegroup_name:
     ensure               => $ensure,
@@ -31,7 +37,7 @@ define nagios::object::servicegroup(
     provider             => $provider,
     register             => $register,
     servicegroup_members => $servicegroup_members,
-    target               => $target,
+    target               => $_target,
     use                  => $use,
   }
 }

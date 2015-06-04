@@ -52,10 +52,16 @@ define nagios::object::service(
   $service_description          = undef,
   $servicegroups                = undef,
   $stalking_options             = undef,
-  $target                       = $nagios::config::service_config_file,
+  $target                       = undef,
   $use                          = undef,
 ){
   include nagios
+
+  unless $target {
+    $_target = $nagios::config::service_config_file
+  } else {
+    $_target = $target
+  }
 
   nagios_service { $_naginator_name:
   ensure                       => $ensure,
@@ -109,7 +115,7 @@ define nagios::object::service(
   service_description          => $service_description,
   servicegroups                => $servicegroups,
   stalking_options             => $stalking_options,
-  target                       => $target,
+  target                       => $_target,
   use                          => $use,
 
   }
