@@ -1,8 +1,8 @@
 #
 define nagios::object::contactgroup(
+  $contactgroup_alias,
   $contactgroup_name    = $title,
   $ensure               = 'present',
-  $contactgroup_alias   = undef,
   $contactgroup_members = undef,
   $group                = undef,
   $members              = undef,
