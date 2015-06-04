@@ -46,6 +46,7 @@ class nagios (
   $cgi_config_file  = $nagios::params::cgi_config_file,
   $main_config_file = $nagios::params::main_config_file,
   $cfg_dir          = $nagios::params::cfg_dir,
+  $default_objects  = true,
 ) inherits nagios::params {
   contain nagios::install
   contain nagios::config

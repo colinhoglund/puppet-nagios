@@ -1,11 +1,11 @@
 #
 define nagios::object::host(
-  $address,
+  $address                      = undef,
   $host_name                    = $title,
   $ensure                       = 'present',
   $action_url                   = undef,
   $active_checks_enabled        = undef,
-  $alias                        = undef,
+  $host_alias                   = undef,
   $business_impact              = undef,
   $check_command                = undef,
   $check_freshness              = undef,
@@ -67,7 +67,7 @@ define nagios::object::host(
     action_url                   => $action_url,
     active_checks_enabled        => $active_checks_enabled,
     address                      => $address,
-    alias                        => $alias,
+    alias                        => $host_alias,
     business_impact              => $business_impact,
     check_command                => $check_command,
     check_freshness              => $check_freshness,

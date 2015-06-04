@@ -11,7 +11,7 @@ define nagios::object::service(
   $check_period                 = undef,
   $contact_groups               = undef,
   $contacts                     = undef,
-  $display_name                 = undef,
+  $display_name                 = $title,
   $event_handler                = undef,
   $event_handler_enabled        = undef,
   $failure_prediction_enabled   = undef,
