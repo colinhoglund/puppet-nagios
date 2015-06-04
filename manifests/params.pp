@@ -164,7 +164,6 @@ class nagios::params {
 
   case $::operatingsystem {
     'Debian': {
-      $package_prereq = []
       $package_name = 'nagios3'
       $service_name = 'nagios3'
       $cgi_config_file = '/etc/nagios3/cgi.cfg'
@@ -195,9 +194,8 @@ class nagios::params {
     }
 
     'CentOS': {
-      $package_prereq  = ['epel-release']
-      if ! defined(Package[$package_prereq]) {
-        package { $package_prereq: ensure => present }
+      if ! defined(Package['epel-release']) {
+        package { 'epel-release': ensure => present }
       }
       $package_name = 'nagios'
       $service_name = 'nagios'
