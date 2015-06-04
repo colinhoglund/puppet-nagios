@@ -42,5 +42,6 @@ define nagios::object::hostdependency(
     register                      => $register,
     target                        => $_target,
     use                           => $use,
+    notify                        => Service[$nagios::service_name],
   }
 }

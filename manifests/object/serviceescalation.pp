@@ -49,5 +49,6 @@ define nagios::object::serviceescalation(
     servicegroup_name     => $servicegroup_name,
     target                => $_target,
     use                   => $use,
+    notify                => Service[$nagios::service_name],
   }
 }

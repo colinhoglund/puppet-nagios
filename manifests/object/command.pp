@@ -29,5 +29,6 @@ define nagios::object::command(
     provider     => $provider,
     target       => $_target,
     use          => $use,
+    notify       => Service[$nagios::service_name],
   }
 }
