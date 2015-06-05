@@ -33,7 +33,7 @@ class nagios::params {
     }
 
     'CentOS': {
-      if ! defined(Package['epel-release']) {
+      if !defined(Package[epel-release]) and !defined(Yumrepo[epel]) {
         package { 'epel-release': ensure => present }
       }
       $package_name = 'nagios'
