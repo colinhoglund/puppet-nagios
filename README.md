@@ -50,7 +50,7 @@ class { 'nagios':
 nagios::object::command { 'check_ssh':
     command_line => '$USER1$/check_ssh $ARG1$ $HOSTADDRESS$',
 }
-etc...
+#etc...
 ```
 ## Reference
 
