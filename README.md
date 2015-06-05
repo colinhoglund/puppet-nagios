@@ -19,8 +19,8 @@ Installs and configures Nagios
 ## Module Description
 
 This module automates the installation and configuration of the
-core Nagios program. It is intended to be used in conjunction with
-web server (Apache/nginx) and remote execution (NRPE) modules.
+core Nagios program. It is intended to be used in conjunction with modules
+that manage a web server (Apache/nginx) and remote plugin execution (NRPE).
 
 ## Setup
 
@@ -69,12 +69,16 @@ Install Nagios with default object definitions:
 
 ## Development
 
+### Release Notes/Contributors/Etc
+
+This module is in its early stages and will likely go though many revisions.
+
+### Planned Updates
+* puppetize resource.cfg
+* ...
+
 ### Contributing
 The idea behind this module is to simply install/configure the Nagios service. It was
 a conscious decision to leave out "addons" such as NRPE. Any functionality
 that doesn't directly affect the running state of the Nagios daemon belongs
 in its own module.
-
-## Release Notes/Contributors/Etc
-
-This module is in it's early stages and will likely go though a number of revisions.
