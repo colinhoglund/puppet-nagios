@@ -135,6 +135,8 @@ class nagios::config::main (
 ){
   $cfg_dir = $nagios::cfg_dir
 
+  require nagios::config
+
   file { $nagios::main_config_file:
     ensure  => file,
     owner   => 'root',

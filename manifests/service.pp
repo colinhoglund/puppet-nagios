@@ -2,6 +2,8 @@
 class nagios::service (
   $reload_command = $nagios::params::reload_command,
 ){
+  require nagios::config
+
   if $nagios::service_manage {
     service { $nagios::service_name:
       ensure     => $nagios::service_ensure,

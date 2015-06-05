@@ -41,6 +41,8 @@ class nagios::config::cgi (
 ){
   $main_config_file = $nagios::main_config_file
 
+  require nagios::config
+
   file { $nagios::cgi_config_file:
     ensure  => file,
     owner   => 'root',

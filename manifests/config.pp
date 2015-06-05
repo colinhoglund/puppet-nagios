@@ -13,8 +13,11 @@ class nagios::config (
   $servicegroup_config_file      = "${nagios::cfg_dir}/servicegroups.cfg",
   $timeperiod_config_file        = "${nagios::cfg_dir}/timeperiods.cfg",
 ){
-  contain nagios::config::main
-  contain nagios::config::cgi
+  require nagios::install
+
+  include nagios::config::main
+  include nagios::config::cgi
+  if $nagios::default_objects { include nagios::config::default }
 
   file {
     $nagios::cfg_dir:
@@ -41,6 +44,4 @@ class nagios::config (
       group  => 'root',
       mode   => '0644'
   }
-
-  if $nagios::default_objects { include nagios::config::default }
 }

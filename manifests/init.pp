@@ -27,9 +27,9 @@ class nagios (
   $cfg_dir          = $nagios::params::cfg_dir,
   $default_objects  = true,
 ) inherits nagios::params {
-  contain nagios::install
-  contain nagios::config
-  contain nagios::service
+  include nagios::install
+  include nagios::config
+  include nagios::service
 
   Class['nagios::install'] ->
   Class['nagios::config'] ~>
