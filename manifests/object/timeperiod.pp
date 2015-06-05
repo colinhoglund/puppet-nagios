@@ -45,6 +45,5 @@ define nagios::object::timeperiod(
     tuesday   => $tuesday,
     use       => $use,
     wednesday => $wednesday,
-    notify    => Service[$nagios::service_name],
   }
 }

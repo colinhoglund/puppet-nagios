@@ -39,6 +39,5 @@ define nagios::object::servicegroup(
     servicegroup_members => $servicegroup_members,
     target               => $_target,
     use                  => $use,
-    notify               => Service[$nagios::service_name],
   }
 }

@@ -117,6 +117,5 @@ define nagios::object::service(
     stalking_options             => $stalking_options,
     target                       => $_target,
     use                          => $use,
-    notify                       => Service[$nagios::service_name],
   }
 }

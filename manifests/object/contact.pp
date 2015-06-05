@@ -69,6 +69,5 @@ define nagios::object::contact (
     service_notifications_enabled => $service_notifications_enabled,
     target                        => $_target,
     use                           => $use,
-    notify                        => Service[$nagios::service_name],
   }
 }

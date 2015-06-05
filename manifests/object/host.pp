@@ -115,6 +115,5 @@ define nagios::object::host(
     target                       => $_target,
     use                          => $use,
     vrml_image                   => $vrml_image,
-    notify                       => Service[$nagios::service_name],
   }
 }

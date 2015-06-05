@@ -41,6 +41,5 @@ define nagios::object::hostgroup(
     register          => $register,
     target            => $_target,
     use               => $use,
-    notify            => Service[$nagios::service_name],
   }
 }

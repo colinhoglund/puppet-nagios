@@ -47,6 +47,5 @@ define nagios::object::servicedependency(
     service_description           => $service_description,
     target                        => $_target,
     use                           => $use,
-    notify                        => Service[$nagios::service_name],
   }
 }
