@@ -38,9 +38,20 @@ web server (Apache/nginx/etc...) configured to serve Nagios' web frontend.
 
 Install Nagios with default object definitions:
 ```puppet
-  include nagios
+include nagios
 ```
 
+Install Nagios without default configuration and define custom objects
+```puppet
+class { 'nagios':
+  default_objects => false,
+}
+
+nagios::object::command { 'check_ssh':
+    command_line => '$USER1$/check_ssh $ARG1$ $HOSTADDRESS$',
+}
+etc...
+```
 ## Reference
 
 ###Classes
