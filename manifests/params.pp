@@ -167,6 +167,7 @@ class nagios::params {
       $package_name = 'nagios3'
       $service_name = 'nagios3'
       $cgi_config_file = '/etc/nagios3/cgi.cfg'
+      $reload_command = "/usr/sbin/service ${service_name} reload"
 
       # cgi.cfg options
       $main_config_file = '/etc/nagios3/nagios.cfg'
@@ -200,6 +201,7 @@ class nagios::params {
       $package_name = 'nagios'
       $service_name = 'nagios'
       $cgi_config_file = '/etc/nagios/cgi.cfg'
+      $reload_command = "/usr/sbin/service ${service_name} reload"
 
       # cgi.cfg options
       $main_config_file = '/etc/nagios/nagios.cfg'
