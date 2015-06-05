@@ -41,7 +41,7 @@ Install Nagios with default object definitions:
 include nagios
 ```
 
-Install Nagios without default configuration and define custom objects
+Install Nagios without default configuration and define custom objects:
 ```puppet
 class { 'nagios':
   default_objects => false,
@@ -52,6 +52,8 @@ nagios::object::command { 'check_ssh':
 }
 #etc...
 ```
+Note: The Nagios service will fail to start when installing with
+      'default_objects => false' until all object resources have been defined.
 ## Reference
 
 ###Classes
