@@ -33,5 +33,6 @@ define nagios::object::contactgroup(
     register             => $register,
     target               => $_target,
     use                  => $use,
+    notify               => Service[$nagios::service_name],
   }
 }

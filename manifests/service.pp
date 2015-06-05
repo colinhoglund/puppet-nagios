@@ -6,7 +6,7 @@ class nagios::service {
       enable     => $nagios::service_enable,
       name       => $nagios::service_name,
       hasstatus  => true,
-      restart    => 'reload',
+      hasrestart => true,
     }
   }
 }
