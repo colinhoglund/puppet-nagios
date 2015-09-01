@@ -89,7 +89,6 @@ Note: The Nagios service will fail to start when installing with
 This module is in its early stages and will likely go though many revisions.
 
 ### Planned Updates
-* puppetize resource.cfg
 * ...
 
 ### Contributing
