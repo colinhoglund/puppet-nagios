@@ -1,0 +1,4 @@
+$USER1$=<%= @plugins_dir %>
+<% @macros.each_with_index do |macro, ind| -%>
+$USER<%= ind.to_i + 2 %>$=<%= macro %>
+<% end %>

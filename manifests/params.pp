@@ -6,13 +6,14 @@ class nagios::params {
       $service_name = 'nagios3'
       $cgi_config_file = '/etc/nagios3/cgi.cfg'
       $reload_command = "/usr/sbin/service ${service_name} reload"
+      $plugins_dir = '/usr/lib/nagios/plugins'
 
       # cgi.cfg options
       $main_config_file = '/etc/nagios3/nagios.cfg'
       $physical_html_path = '/usr/share/nagios3/htdocs'
       $url_html_path = '/nagios3'
       $show_context_help = '1'
-      $nagios_check_command = "/usr/lib/nagios/plugins/check_nagios /var/cache/nagios3/status.dat 5 '/usr/sbin/nagios3'"
+      $nagios_check_command = "${plugins_dir}/check_nagios /var/cache/nagios3/status.dat 5 '/usr/sbin/nagios3'"
 
       # nagios.cfg options
       $log_file = '/var/log/nagios3/nagios.log'
@@ -40,6 +41,7 @@ class nagios::params {
       $service_name = 'nagios'
       $cgi_config_file = '/etc/nagios/cgi.cfg'
       $reload_command = "/usr/sbin/service ${service_name} reload"
+      $plugins_dir = '/usr/lib64/nagios/plugins'
 
       # cgi.cfg options
       $main_config_file = '/etc/nagios/nagios.cfg'

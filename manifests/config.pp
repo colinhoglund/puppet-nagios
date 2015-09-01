@@ -17,6 +17,7 @@ class nagios::config (
 
   include nagios::config::main
   include nagios::config::cgi
+  include nagios::config::resource
   if $nagios::default_objects { include nagios::config::default }
 
   file {
