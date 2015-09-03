@@ -107,6 +107,7 @@ class nagios::config::default {
 
   nagios::object::host {
     'generic-host':
+      check_command                => 'check-host-alive',
       max_check_attempts           => '10',
       notifications_enabled        => '1',
       event_handler_enabled        => '1',
