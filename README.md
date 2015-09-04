@@ -1,7 +1,5 @@
 # puppet-nagios
 
-WORK IN PROGRESS...
-
 #### Table of Contents
 
 1. [Overview](#overview)
@@ -76,6 +74,9 @@ Note: The Nagios service will fail to start when installing with
 * nagios::object::timeperiod
 
 ## Limitations
+
+###Nagios Version Compatibility
+* This has been tested with Nagios Core 3.5.1
 
 ###OS Compatibility
 * CentOS
