@@ -1,6 +1,6 @@
 #
 define nagios::object::hostgroup(
-  $alias,
+  $hostgroup_alias,
   $hostgroup_name    = $title,
   $ensure            = 'present',
   $action_url        = undef,
@@ -28,7 +28,7 @@ define nagios::object::hostgroup(
   nagios_hostgroup { $hostgroup_name:
     ensure            => $ensure,
     action_url        => $action_url,
-    alias             => $alias,
+    alias             => $hostgroup_alias,
     group             => $group,
     hostgroup_members => $hostgroup_members,
     members           => $members,
