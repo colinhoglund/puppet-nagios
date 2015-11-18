@@ -87,7 +87,9 @@ Note: The Nagios service will fail to start when installing with
 
 ### Release Notes/Contributors/Etc
 
-This module is in its early stages and will likely go though many revisions.
+~~This module is in its early stages and will likely go though many revisions.~~
+
+I have a new job and we don't use Puppet...sorry.
 
 ### Planned Updates
 * ...
